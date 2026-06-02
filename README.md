@@ -20,10 +20,10 @@
 ## 📸 Screenshots
 
 ### Editor Canvas
-![Pipeline editor with sidebar, dark canvas, and connected gradient nodes](docs/editor_screenshot.png)
+![Pipeline editor with sidebar, dark canvas, and connected gradient nodes](frontend/docs/editor_screenshot.png)
 
 ### Pipeline Analysis Modal
-![Analysis modal showing node count, edge count, and Pipeline is executable status](docs/dag_modal_screenshot.png)
+![Analysis modal showing node count, edge count, and Pipeline is executable status](frontend/docs/dag_modal_screenshot.png)
 
 ---
 
@@ -238,6 +238,8 @@ CORS is enabled for `http://localhost:3000`.
 
 ```
 frontend_technical_assessment/
+│
+├── README.md                  ← ⭐ Root README (this file)
 │
 ├── frontend/
 │   ├── src/

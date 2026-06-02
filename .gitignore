@@ -27,3 +27,6 @@ Thumbs.db
 
 # Temp
 copy_screenshots.bat
+*.bat
+node_modules
+
