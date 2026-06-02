@@ -56,7 +56,7 @@ export const BaseNode = ({
     switch (field.type) {
       case 'text':
         return (
-          <div className="node-field" key={field.name}>
+          <div className="node-field">
             <label className="node-label">{field.label}</label>
             <input
               className="node-input"
@@ -70,7 +70,7 @@ export const BaseNode = ({
 
       case 'number':
         return (
-          <div className="node-field" key={field.name}>
+          <div className="node-field">
             <label className="node-label">{field.label}</label>
             <input
               className="node-input"
@@ -84,7 +84,7 @@ export const BaseNode = ({
 
       case 'select':
         return (
-          <div className="node-field" key={field.name}>
+          <div className="node-field">
             <label className="node-label">{field.label}</label>
             <select
               className="node-select"
@@ -102,7 +102,7 @@ export const BaseNode = ({
 
       case 'textarea':
         return (
-          <div className="node-field" key={field.name}>
+          <div className="node-field">
             <label className="node-label">{field.label}</label>
             <textarea
               className="node-textarea"
@@ -116,7 +116,7 @@ export const BaseNode = ({
 
       case 'readonly':
         return (
-          <div className="node-field" key={field.name}>
+          <div className="node-field">
             <label className="node-label">{field.label}</label>
             <div className="node-readonly">{value}</div>
           </div>
@@ -151,7 +151,11 @@ export const BaseNode = ({
 
       {/* Body */}
       <div className="node-body">
-        {fields.map((field) => renderField(field))}
+        {fields.map((field) => (
+          <div key={field.name}>
+            {renderField(field)}
+          </div>
+        ))}
         {children}
       </div>
 
